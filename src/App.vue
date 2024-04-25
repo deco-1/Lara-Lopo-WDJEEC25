@@ -14,11 +14,11 @@ const date = ref({
 });
 
 function dateCallback() {
-  const dateArr = ["3", "3", "2"]
+  const dateArr = dateModal.value.split("-");
   
-  date.value.year = dateArr[0].toString(2);
-  date.value.month = dateArr[1].toString(2);
-  date.value.day = dateArr[2].toString(2);
+  date.value.year = Number(dateArr[0]).toString(2);
+  date.value.month = Number(dateArr[1]).toString(2);
+  date.value.day = Number(dateArr[2]).toString(2);
 }
 </script>
 
